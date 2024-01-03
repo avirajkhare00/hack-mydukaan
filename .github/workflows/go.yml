@@ -26,3 +26,9 @@ jobs:
 
     - name: Check version
       run: bombardier --version
+
+    - name: bombard api
+      run: |
+        for i in {1..100} ; do
+          bombardier -c 500 -l -t 3600s -m POST https://api.mydukaan.io/api/advanced-search/101959141
+        done

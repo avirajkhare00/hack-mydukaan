@@ -25,4 +25,4 @@ jobs:
       run: go install github.com/codesenberg/bombardier@latest
 
     - name: Check version
-      run: bombardier -v
+      run: bombardier --version
